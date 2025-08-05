@@ -110,7 +110,7 @@ import torch.nn as nn
 import numpy as np
 
 # ----------- Step 1: Load Clean Audio and Create Noisy Version -----------
-clean_audio, sr = librosa.load('gracie abrams imyis.m4a', sr=22050)
+clean_audio, sr = librosa.load('blorbs.wav', sr=22050)
 
 def add_noise(audio, noise_level=0.2):
     noise = np.random.normal(0, noise_level, audio.shape)
