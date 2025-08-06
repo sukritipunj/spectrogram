@@ -7,7 +7,6 @@ import torch.nn as nn
 # Load audio
 audio, sr = librosa.load('blorbs.wav', sr=22050)
 
-#audio, sr = librosa.load('sauna test.wav', sr=22050)
 
 # %%
 # Create spectrogram (no cropping needed!)
@@ -22,10 +21,6 @@ spec_min = spectrogram_db.min()
 spec_max = spectrogram_db.max()
 spectrogram_db = (spectrogram_db - spec_min) / (spec_max - spec_min)  # Now in [0, 1]
 
-
-# %%
-# Reverse later for visualization:
-# reconstructed = reconstructed * (spec_max - spec_min) + spec_min
 
 
 # %%
